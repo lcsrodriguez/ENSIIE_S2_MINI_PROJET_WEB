@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    width: 60%;
+}
+p{
+    display: block;
+    margin: 12px 0;
+}
+hr{
+    height: 1px;
+    margin: 30px 0;
+    background-color: black;
+    border: 1px solid black;
+}
+#center{
+    text-align: center;
+    margin: 40px 0;
+}
+#start{
+    text-decoration: none;
+    border: 2px solid blue;
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 14px 25px;
+}
+h1{
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 45px;
+}
+h2{
+    border-bottom: 1px solid #dde;
+    margin: 20px 0;
+}
+.highlight {
+    animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+    50% {
+        background-color: magenta;
+        border-bottom: 2px solid red;
+    }
+}
+.column:first-child {
+    float: left;
+    width: 60%;
+}
+.column:last-child{
+    float: right;
+    width: 36%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#txtHint{
+    margin-top: 30px;
+}
+
+
+/*
+    HEADER
+*/
+header{
+    background-color: black;
+    margin-bottom: 40px;
+}
+nav{
+    overflow: hidden;
+    background-color: black;
+}
+nav a{
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px;
+}
+nav a:not(#title):hover{
+    background-color: white;
+    color: black;
+}
+.nav_right{
+    float: right;
+}
+
+/*
+    FOOTER
+ */
+footer{
+    margin: 50px 0;
+}
+
+/*
+    FORMULAIRE
+*/
+#search input[type=text]{
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+    font-size: 22px;
+    color: blue;
+    border: 2px solid black;
+}
+
+#search select{
+    display: block;
+    margin: 10px 0;
+    padding: 2px;
+    color: black;
+    border: 2px solid black;
+}
+#search input[type=submit]{
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+    font-size: 22px;
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+}
+
+@media screen and (max-width: 900px) {
+    .column:first-child,
+    .column:last-child{
+        float: left;
+        width: 100%!important;
+        display: block;
+    }
+    .column:last-child{
+        margin-top: 20px;
+    }
+}
+
+/*
+    TABLE de suggestions
+ */
+.suggest{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 4px;
+}
+.suggest tr:first-child{
+    background-color: black;
+    color: white;
+}
+.suggest tr:first-child td{
+    text-align: center;
+}
+.suggest tr:nth-child(even){
+    background-color: #eeee;
+}
+.suggest td{
+    padding: 5px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+}
+.suggest tr:hover{
+    background-color: yellow;
+}
+
+/*
+    table film
+
+ */
+div .stats{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #eeee;
+    margin: 30px 0;
+    padding: 5px;
+}
+.stats tr:first-child{
+    background-color: blue;
+}
+.stats tr:first-child td{
+    text-align: center;
+    padding: 5px;
+    color: white;
+
+}
+.stats tr:nth-child(2) td{
+    text-align: center;
+    font-weight: bold;
+}
+.stats tr:last-child td{
+    padding: 5px;
+    text-align: center;
+}
+#vote_value{
+    font-weight: bold;
+    color: black;
+}
+#vote_form input[type=text]{
+    width: 48%;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 20px 0;
+}
+#vote_form input[type=range]{
+    width: 50%;
+}
+#vote_form input[type=submit]{
+    width: 50%;
+    border: 2px solid blue;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+}
+
+#vote_form_msg{
+    color: red;
+}
+#vote_nb,
+#vote_avg{
+    color: blue;
+    font-weight: bold;
+}
+#progress-bar{
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #dddddd;
+}
+#progress-bar #progress-level{
+    background-color: blue;
+    padding: 3px;
+    border: 2px solid blue;
+}
+#films ul{
+    list-style-type: none;
+}
+#films ul li{
+    margin: 5px 0;
+}
